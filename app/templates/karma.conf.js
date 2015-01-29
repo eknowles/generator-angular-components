@@ -1,4 +1,3 @@
-
 // base path, that will be used to resolve files and exclude
 basePath = '.';
 
@@ -15,8 +14,7 @@ files = [
 ];
 
 // list of files to exclude
-exclude = [
-];
+exclude = [];
 
 // Start these browsers, currently available:
 // - Chrome
@@ -26,7 +24,7 @@ exclude = [
 // - Safari
 // - PhantomJS
 browsers = [
-  'Chrome'
+  'PhantomJS'
 ];
 
 // test results reporter to use
@@ -44,12 +42,12 @@ colors = true;
 
 // level of logging
 // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-logLevel = LOG_INFO;
+logLevel = LOG_DEBUG;
 
 // enable / disable watching file and executing tests whenever any file changes
 autoWatch = false;
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit
-singleRun = false;
+singleRun = true;
 
