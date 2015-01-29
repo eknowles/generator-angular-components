@@ -1,5 +1,5 @@
 describe('<%= componentModuleName %>', function () {
-  beforeEach(module('<%= componentModuleName %>', '<%= componentTplDir %>/<%= this.componentId %>.html'));
+  beforeEach(module('<%= componentModuleName %>', '<%= componentTplDir %>/<%= componentId %>.html'));
 
 
 });
