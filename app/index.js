@@ -53,6 +53,7 @@ var AngularComponentsGenerator = yeoman.generators.Base.extend({
     this.template('_Gruntfile.js', 'Gruntfile.js');
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');
+    this.template('_README.md', 'README.md');
   },
 
   projectfiles: function () {
