@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="bootstrapDemoApp" id="top">
+<html lang="en" ng-app="<%%= _.camelize(pkg.name) %>Demo" id="top">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title></title>
-  <meta name="description"
-        content="<%% demoModules.forEach(function(module) { %><%%= module.displayName %>, <%% }); %>">
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular.min.js"></script>
