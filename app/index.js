@@ -11,6 +11,14 @@ var AngularComponentsGenerator = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
 
     this.on('end', function () {
+
+      this.config.set('userName', this.userName);
+      this.config.set('repoHost', this.repoHost);
+      this.config.set('libraryName', this.libraryName);
+      this.config.set('libraryPrefix', this.libraryPrefix);
+      this.config.set('generatorVersion', this.pkg.version);
+      this.config.save();
+
       if (!this.options['skip-install']) {
         this.installDependencies();
       }
@@ -29,16 +37,31 @@ var AngularComponentsGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       name: 'libraryName',
       message: 'What do you want to call your library?',
-      default: 'My Angular components library'
+      type: 'input',
+      default: 'Components Library'
     }, {
       name: 'libraryPrefix',
       message: 'What prefix do you want for your library?',
-      default: 'ui.mylib'
+      type: 'input',
+      default: 'ui.lib'
+    }, {
+      name: 'repoHost',
+      message: 'Where will you host this repository?',
+      type: 'list',
+      choices: ['bitbucket.org', 'github.com'],
+      default: 'bitbucket.org'
+    }, {
+      name: 'userName',
+      message: 'What is your GitHub/BitBucket username?',
+      type: 'input',
+      default: 'eknowles'
     }];
 
     this.prompt(prompts, function (props) {
       this.libraryName = props.libraryName;
       this.libraryPrefix = props.libraryPrefix;
+      this.repoHost = props.repoHost;
+      this.userName = props.userName;
       done();
     }.bind(this));
   },

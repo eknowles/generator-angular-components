@@ -1,4 +1,4 @@
-angular.module('<%%= _.camelize(pkg.name) %>Demo', [
+angular.module('app', [
   '<%= libraryPrefix %>',
   'ngTouch',
   'ui.bootstrap'

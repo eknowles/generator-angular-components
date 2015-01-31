@@ -19,6 +19,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     ngversion: '1.2.10',
     bsversion: '3.0.3',
+    uibootstrap: '0.12.0',
     modules: [],//to be filled in by build task
     pkg: grunt.file.readJSON('package.json'),
     dist: 'dist',
@@ -71,7 +72,7 @@ module.exports = function (grunt) {
       demohtml: {
         options: {
           //process html files with gruntfile config
-          processContent: grunt.template.process
+          process: grunt.template.process
         },
         files: [{
           expand: true,
@@ -196,7 +197,7 @@ module.exports = function (grunt) {
           'docs/css/style.css'
         ],
         navTemplate: 'docs/nav.html',
-        title: 'ui-bootstrap',
+        title: '<%%= pkg.name %>',
         html5Mode: false
       },
       api: {

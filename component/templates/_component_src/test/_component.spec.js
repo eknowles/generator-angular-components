@@ -11,8 +11,8 @@ describe('<%= componentModuleName %>', function () {
 
   // http://jasmine.github.io/2.0/introduction.html
 
-  describe("this thing", function () {
-    it("should be true", function () {
+  describe('this thing', function () {
+    it('should be true', function () {
       expect(true).toBe(true);
     });
 

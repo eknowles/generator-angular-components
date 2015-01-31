@@ -1,4 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic);
+
 body {
+  font-family: 'Lato';
   opacity: 1;
   -webkit-transition: opacity 1s ease;
   -moz-transition: opacity 1s ease;
@@ -170,7 +173,7 @@ section {
 }
 
 .bs-header h1 {
-  text-transform: uppercase;
+  font-weight: 100;
   color: #fff;
 }
 
