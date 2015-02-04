@@ -4,12 +4,11 @@
   "description": "Instant scaffolding of your Angular library",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "Dictanova/generator-angular-components",
-  "author": {
-    "name": "Antoine BANCTEL-CHEVREL",
-    "email": "",
-    "url": "https://github.com/abanctelchevrel"
-  },
+  "repository": "eknowles/generator-angular-components",
+  "author": [
+    { "name": "Antoine BANCTEL-CHEVREL", "email": "", "url": "https://github.com/abanctelchevrel" },
+    { "name": "Edward Knowles", "email": "", "url": "https://github.com/eknowles" }
+  ],
   "engines": {
     "node": ">=0.10.0"
   },

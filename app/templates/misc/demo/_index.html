@@ -2,29 +2,34 @@
 <html lang="en" ng-app="app" id="top">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title></title>
 
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/<%%= bsversion %>/js/bootstrap.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
+
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular-touch.min.js"></script>
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/<%%= uibootstrap %>/ui-bootstrap.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/<%%= uibootstrap %>/ui-bootstrap-tpls.min.js"></script>
+
   <script src="<%= libraryPrefix %>-tpls-<%%= pkg.version%>.min.js"></script>
   <script src="assets/app.js"></script>
 
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/<%%= bsversion %>/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/rainbow.css"/>
-  <link rel="stylesheet" href="assets/demo.css"/>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic" type="text/css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/<%%= bsversion %>/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/rainbow.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/demo.css" type="text/css"/>
 </head>
 <body class="ng-cloak">
 <header class="navbar navbar-default navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3"
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-nav"
                 ng-click="isCollapsed = !isCollapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -39,6 +44,7 @@
             <%= libraryName %>
           </a>
 
+          <li><a href="#getting_started">Getting started</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Directives <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
@@ -47,10 +53,10 @@
               <%% }); %>
             </ul>
           </li>
-          <li><a href="#getting_started">Getting started</a></li>
+          <li><a href="#css">CSS</a></li>
         </ul>
       </nav>
-      <nav class="visible-xs" collapse="!isCollapsed">
+      <nav class="visible-xs" id="mobile-nav" collapse="!isCollapsed">
         <ul class="nav navbar-nav">
           <li><a href="#getting_started" ng-click="isCollapsed = !isCollapsed">Getting started</a></li>
           <li><a href="#directives_small" ng-click="isCollapsed = !isCollapsed">Directives</a></li>
@@ -111,15 +117,12 @@
 
           <h3>Installation</h3>
 
-          <pre><code>
-            &lt;script src="js/<%= libraryPrefix %>-<%%= pkg.version %>.min.js"&gt;&lt;/script&gt;<br/>
-            &lt;script src="js/<%= libraryPrefix %>-tpls-<%%= pkg.version%>.min.js"&gt;&lt;/script&gt;
-          </code></pre>
+          <pre><code>&lt;script src="js/<%= libraryPrefix %>-<%%= pkg.version %>.min.js"&gt;&lt;/script&gt;<br/>&lt;script src="js/<%= libraryPrefix %>-tpls-<%%= pkg.version%>.min.js"&gt;&lt;/script&gt;</code></pre>
 
           <p>As soon as you've got all the files downloaded and included in your page you just need to declare
             a dependency on the <code><%= libraryPrefix %></code> <a href="http://docs.angularjs.org/guide/module">module</a>:<br>
 
-          <pre><code>angular.module('myModule', ['<%= libraryPrefix %>']);</code></pre>
+          <pre><code>angular.module('myModule', ['<strong><%= libraryPrefix %></strong>']);</code></pre>
 
           <h3>CSS</h3>
 
