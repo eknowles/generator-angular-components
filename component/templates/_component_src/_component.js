@@ -1,13 +1,13 @@
 
 /**
- * 
+ *
  * @name <%= componentModuleName %>
  *
  * @description
  * Describe the <%= componentName %> component here.
  */
 
-angular.module('<%= componentModuleName %>', [])
+angular.module('<%= componentModuleName %>', ['ui.bootstrap'])
 
 .constant('<%= camelizedName %>Config', {
   configVar: true

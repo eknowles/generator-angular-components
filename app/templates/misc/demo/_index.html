@@ -6,23 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title></title>
 
-  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/<%%= bsversion %>/js/bootstrap.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular-touch.min.js"></script>
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/<%%= uibootstrap %>/ui-bootstrap.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/<%%= uibootstrap %>/ui-bootstrap-tpls.min.js"></script>
-
-  <script src="<%= libraryPrefix %>-tpls-<%%= pkg.version%>.min.js"></script>
-  <script src="assets/app.js"></script>
-
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic" type="text/css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/<%%= bsversion %>/css/bootstrap.min.css" type="text/css"/>
   <link rel="stylesheet" href="assets/rainbow.css" type="text/css"/>
   <link rel="stylesheet" href="assets/demo.css" type="text/css"/>
+
+  <!--jquery / vendor-->
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/<%%= bsversion %>/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
+
+  <!--angular-->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/<%%= ngversion %>/angular-touch.min.js"></script>
+
+  <!--ui.bootstrap-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/<%%= uibootstrap %>/ui-bootstrap-tpls.min.js"></script>
+
+  <!--<%= libraryPrefix %>-->
+  <script src="<%= libraryPrefix %>-tpls-<%%= pkg.version%>.min.js"></script>
+  <script src="assets/app.js"></script>
+
 </head>
 <body class="ng-cloak">
 <header class="navbar navbar-default navbar-fixed-top">
@@ -70,8 +74,6 @@
   <header class="bs-header text-center" id="overview">
     <div class="container">
       <h1><%= libraryName %></h1>
-
-      <p>Version <%%= pkg.version%></p>
     </div>
   </header>
   <div class="container">
@@ -100,6 +102,7 @@
             <li><a href="http://angularjs.org" target="_blank">AngularJS</a> (requires AngularJS 1.2.x, tested with
               1.2.16)
             </li>
+            <li><a href="https://github.com/angular-ui/bootstrap" target="_blank">UI Bootstrap</a></li>
             <li><a href="http://getbootstrap.com" target="_blank">Bootstrap CSS</a> (tested with version 3.1.1).
               This version of the library (0.12.0) works only with Bootstrap CSS in version 3.x.
               0.8.0 is the last version of this library that supports Bootstrap CSS in version 2.3.x.
@@ -116,8 +119,6 @@
           </p>
 
           <h3>Installation</h3>
-
-          <pre><code>&lt;script src="js/<%= libraryPrefix %>-<%%= pkg.version %>.min.js"&gt;&lt;/script&gt;<br/>&lt;script src="js/<%= libraryPrefix %>-tpls-<%%= pkg.version%>.min.js"&gt;&lt;/script&gt;</code></pre>
 
           <p>As soon as you've got all the files downloaded and included in your page you just need to declare
             a dependency on the <code><%= libraryPrefix %></code> <a href="http://docs.angularjs.org/guide/module">module</a>:<br>
